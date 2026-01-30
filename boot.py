@@ -5,7 +5,7 @@ import usb_hid
 
 switch = digitalio.DigitalInOut(board.GP10)
 switch.direction = digitalio.Direction.INPUT
-switch.pull = digitalio.Pull.UP  # ON = grounded
+switch.pull = digitalio.Pull.DOWN  # OFF = 3.3v
 
 if switch.value:
     # SAFE MODE
@@ -15,3 +15,4 @@ else:
     print("ARMED MODE: HID only")
     storage.disable_usb_drive()
     usb_hid.enable()
+
