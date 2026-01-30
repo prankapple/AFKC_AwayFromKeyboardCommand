@@ -7,7 +7,7 @@ switch = digitalio.DigitalInOut(board.GP10)
 switch.direction = digitalio.Direction.INPUT
 switch.pull = digitalio.Pull.DOWN  # OFF = 3.3v
 
-if switch.value:
+if not switch.value:
     # SAFE MODE
     print("SAFE MODE: USB storage enabled")
 else:
@@ -15,4 +15,5 @@ else:
     print("ARMED MODE: HID only")
     storage.disable_usb_drive()
     usb_hid.enable()
+
 
