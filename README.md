@@ -9,7 +9,11 @@ A simple HID device inspired from rubber ducky made from rasberry pi pico. This 
 - Download this repository and extract it, open the **format_pico folder** from the files provided. Copy the flash_nuke.uf2 file to the Raspberry Pi Pico. Wait until it restarts. This process clears the existing firmware.
 - Open the **software** folder. Copy the **adafruit-circuitpython-raspberry_pi_pico-en_US-9.1.1.uf2** file to your Raspberry Pi Pico. Wait until it restarts. After restarting, the Pico should appear as a drive named CIRCUITPY.
 - Copy the **lib** folder on the CIRCUITPY drive, click replace if it asks.
-- Copy the **payload.py** and **code.py**, click replace if it asks. Congratulations! Your AFKC is set up and ready to go. (WARNING: MAKE SURE THAT THW WIRE ISEN'T CONECTED)
+- Copy the **payload.py**, **code.py** and the **boot.py**, click replace if it asks. Congratulations! Your AFKC is set up and ready to go. (WARNING: MAKE SURE THAT THE WIRE ISEN'T CONECTED)
+
+### **OPTIONAL**
+By conecting **GPIO10** to **GND** it will not show up in the file finder.
+If not, the opposite will happen.
 
  ## Payloads
  
